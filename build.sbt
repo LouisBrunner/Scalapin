@@ -8,7 +8,7 @@ ThisBuild / organizationName := "tsuru"
 lazy val root = (project in file("."))
   .settings(
     name := "sapin",
-    libraryDependencies ++= sandboxDeps
+    libraryDependencies ++= sapinDeps
   )
 
 enablePlugins(JavaAppPackaging)

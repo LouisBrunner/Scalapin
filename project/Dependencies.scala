@@ -21,7 +21,7 @@ object Dependencies {
 
   val cats = "org.typelevel" %% "cats-core" % "2.1.1"
 
-  var sandboxDeps = Seq(
+  var sapinDeps = Seq(
     scalaTest % Test,
     cats,
   ) ++ akka ++ macWire

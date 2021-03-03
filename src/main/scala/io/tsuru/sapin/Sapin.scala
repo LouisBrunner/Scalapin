@@ -18,6 +18,7 @@ class Sapin(size: Int) extends SapinService {
     }
     builder ++= (
       space.toString * math.ceil(size * 2.5).toInt
+      // FIXME: probably should round the trunk up to the above odd number?
       + trunk.toString * size
       + System.lineSeparator
     ) * size
