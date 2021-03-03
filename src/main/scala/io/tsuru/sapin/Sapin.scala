@@ -2,11 +2,11 @@ package sapin
 
 import scala.collection.mutable.StringBuilder
 
-class Sapin(size: Int) {
-  def format(leaf: Char, trunk: Char): String = {
-    val space = ' '
+class Sapin(size: Int) extends SapinService {
+  val space = ' '
 
-    var builder = new StringBuilder()
+  def format(leaf: Char, trunk: Char): String = {
+    val builder = new StringBuilder()
     for (i <- 0 until size) {
       for (j <- 0 until i + 4) {
         builder ++= (
@@ -23,4 +23,8 @@ class Sapin(size: Int) {
     ) * size
     builder.toString()
   }
+}
+
+trait SapinService {
+  def format(leaf: Char, trunk: Char): String
 }
