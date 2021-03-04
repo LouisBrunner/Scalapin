@@ -3,7 +3,7 @@ package sapin
 import com.softwaremill.macwire._
 
 object Main extends App {
-  val factory = wire[Factory]
+  val factory: Factory = wire[Factory]
 
   wire[CLI].execute(args) match {
     case Right(s) => println(s)

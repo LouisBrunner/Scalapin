@@ -11,6 +11,6 @@ class Factory extends IFactory {
 trait Module {
   import com.softwaremill.macwire._
 
-  lazy val cli = wire[CLI]
-  lazy val factory = wire[Factory]
+  lazy val cli: CLI = wire[CLI]
+  lazy val factory: Factory = wire[Factory]
 }

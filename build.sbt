@@ -21,6 +21,8 @@ inThisBuild(
   )
 )
 
+scalafixScalaBinaryVersion in ThisBuild := CrossVersion.binaryScalaVersion(scalaVersion.value)
+
 scalacOptions ++= Seq(
   "-deprecation",
   "-feature",
