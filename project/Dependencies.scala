@@ -1,8 +1,6 @@
 import sbt._
 
 object Dependencies {
-  val scalaVer = "2.13.4"
-
   val scalaTest = "org.scalatest" %% "scalatest" % "3.2.2" % Test
   val scalaMock = "org.scalamock" %% "scalamock" % "5.1.0" % Test
 

@@ -7,6 +7,6 @@ object Main extends App {
 
   wire[CLI].execute(args) match {
     case Right(s) => println(s)
-    case Left(s) => println(s"error: $s"); sys.exit(1)
+    case Left(s)  => println(s"error: $s"); sys.exit(1)
   }
 }

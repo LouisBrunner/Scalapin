@@ -8,7 +8,7 @@ class CLI(factory: IFactory) {
     if (args.length > 0) {
       Try(args(0).toInt).toOption match {
         case Some(n) if n > 0 => size = n
-        case _ => return Left(s"invalid sapin size `${args(0)}`")
+        case _                => return Left(s"invalid sapin size `${args(0)}`")
       }
     }
     val sapin = factory.createSapin(size)

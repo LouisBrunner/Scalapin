@@ -11,15 +11,15 @@ class Sapin(size: Int) extends SapinService {
       for (j <- 0 until i + 4) {
         builder ++= (
           space.toString * (size * 3 - (i * 2) - j)
-          + leaf.toString * (i * 4 + j * 2 + 1)
-          + System.lineSeparator
+            + leaf.toString * (i * 4 + j * 2 + 1)
+            + System.lineSeparator
         )
       }
     }
     builder ++= (
       space.toString * math.ceil(size * 2.5).toInt
-      + trunk.toString * { if (size % 2 == 0) size + 1 else size }
-      + System.lineSeparator
+        + trunk.toString * { if (size % 2 == 0) size + 1 else size }
+        + System.lineSeparator
     ) * size
     builder.toString()
   }

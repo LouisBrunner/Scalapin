@@ -12,7 +12,6 @@ class CLISpec extends AnyFlatSpec with Matchers with MockFactory {
     val mockedFactory = mock[Factory]
     (mockedFactory.createSapin _).expects(1).returning(mockedSapin)
 
-
     val cli = new CLI(mockedFactory)
     cli.execute(Array("1")) shouldEqual Right("hello")
   }
