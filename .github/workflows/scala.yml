@@ -12,9 +12,11 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Run tests
-      run: sbt test
     - name: Run linter
-      run: sbt scalafix
+      run: sbt scalafix --check
+    - name: Run tests
+      run: sbt clean coverage test
+    - name: Generate coverage report
+      run: sbt coverageReport coveralls
     - name: Build docker
       run: sbt docker:publishLocal
