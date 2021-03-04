@@ -18,5 +18,7 @@ jobs:
       run: sbt clean coverage test
     - name: Generate coverage report
       run: sbt coverageReport coveralls
+      env:
+        COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
     - name: Build docker
       run: sbt docker:publishLocal
